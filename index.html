@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay's Tigernut Juice — Premium Natural Drink</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="jayfavicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="logo-section">
+                <img src="Jay-logo.jpeg" alt="Jay's Logo" class="nav-logo">
+                <div class="logo-text">
+                    <span class="logo-main">Jay's</span>
+                    <span class="logo-sub">Tigernut Juice</span>
+                </div>
+            </div>
+            <button class="cart-btn" onclick="openCart()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                <span>Cart</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-noise"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+
+        <div class="hero-video-col">
+            <div class="video-frame">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="tigernut-video.mp4" type="video/mp4">
+                </video>
+                <div class="video-badge">100% Natural</div>
+            </div>
+        </div>
+
+        <div class="hero-text-col">
+            <p class="hero-eyebrow">Handcrafted in Lagos</p>
+            <h1 class="hero-title">
+                Premium<br>
+                <em>TigerNut</em><br>
+                Drink
+            </h1>
+            <p class="hero-subtitle">Nutrient-rich. Naturally sweet. Crafted with ancient spices for modern wellness.</p>
+            <div class="hero-tags">
+                <span>No Sugar Added</span>
+                <span>No Preservatives</span>
+                <span>Gluten Free</span>
+            </div>
+            <a href="#order" class="hero-cta">
+                Order Now
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Marquee Strip -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>Tiger Nuts</span><span class="dot">✦</span>
+            <span>Dates</span><span class="dot">✦</span>
+            <span>Ginger</span><span class="dot">✦</span>
+            <span>Turmeric</span><span class="dot">✦</span>
+            <span>Coconut</span><span class="dot">✦</span>
+            <span>Cinnamon</span><span class="dot">✦</span>
+            <span>Black Pepper</span><span class="dot">✦</span>
+            <span>Tiger Nuts</span><span class="dot">✦</span>
+            <span>Dates</span><span class="dot">✦</span>
+            <span>Ginger</span><span class="dot">✦</span>
+            <span>Turmeric</span><span class="dot">✦</span>
+            <span>Coconut</span><span class="dot">✦</span>
+            <span>Cinnamon</span><span class="dot">✦</span>
+            <span>Black Pepper</span><span class="dot">✦</span>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="section-inner">
+            <div class="section-label">Why Choose Us</div>
+            <h2 class="section-title">Nature's finest,<br><em>bottled for you</em></h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                    </div>
+                    <h4>Nutrient-Rich</h4>
+                    <p>Naturally loaded with fiber, essential minerals & healthy fats your body craves</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12m0 0C12 6 6 3 3 3c0 6 4 9 9 9zm0 0c0-6 6-9 9-9 0 6-4 9-9 9z"/></svg>
+                    </div>
+                    <h4>100% Natural</h4>
+                    <p>Zero refined sugar, zero preservatives, zero additives. Pure as nature intended</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h4>Steady Energy</h4>
+                    <p>Sustained, clean energy throughout your day — no crash, no jitters</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients" id="ingredients">
+        <div class="section-inner">
+            <div class="section-label">The Blend</div>
+            <h2 class="section-title">Nature's finest<br><em>ingredients</em></h2>
+            <div class="ingredients-grid">
+                <div class="ingredient-card">
+                    <div class="ingredient-number">01</div>
+                    <h4>Tiger Nuts & Dates</h4>
+                    <p>Nutty, naturally sweet, and packed with nutrients that nourish your body from within</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-number">02</div>
+                    <h4>Ginger & Turmeric</h4>
+                    <p>Warm, aromatic spices revered for centuries for their powerful wellness benefits</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-number">03</div>
+                    <h4>Coconut</h4>
+                    <p>Pure and creamy, giving every bottle its signature smooth texture and rich flavor</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-number">04</div>
+                    <h4>Cinnamon & Black Pepper</h4>
+                    <p>A subtle, warming kick for elevated taste and natural vitality that lasts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order" id="order">
+        <div class="section-inner order-inner">
+            <div class="order-text">
+                <div class="section-label">Order Today</div>
+                <h2 class="section-title">Fresh to your<br><em>door in Lagos</em></h2>
+                <p class="order-desc">Every bottle is made to order in Surulere, Lagos — no sitting on shelves, no compromise on quality.</p>
+                <div class="order-promise">
+                    <div class="promise-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Pick-up available at our Surulere location
+                    </div>
+                    <div class="promise-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Delivery arranged via WhatsApp at affordable rates
+                    </div>
+                    <div class="promise-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Pay the delivery rider directly — simple & transparent
+                    </div>
+                    <div class="promise-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Secure online payment via Flutterwave
+                    </div>
+                </div>
+
+                <div class="delivery-note">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    After placing your order, message us on WhatsApp and we'll coordinate delivery to your location across Lagos at an agreed rate.
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-wrap">
+                    <img src="checkout-image.png" alt="Jay's Tigernut Juice 500ml">
+                    <div class="product-tag">500ml</div>
+                </div>
+                <div class="product-details">
+                    <h3>Jay's TigerNut Juice</h3>
+                    <p class="product-desc-small">Premium cold-pressed tigernut drink with warming spices</p>
+                    <div class="product-price">₦2,000</div>
+                    <div class="qty-row">
+                        <span class="qty-label">Quantity</span>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty()">−</button>
+                            <span class="quantity" id="quantity">1</span>
+                            <button class="qty-btn" onclick="increaseQty()">+</button>
+                        </div>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCart()">
+                        Add to Cart
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-overlay" onclick="closeCart()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Your Cart</h3>
+                <button class="close-btn" onclick="closeCart()">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div id="cartContent"></div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="javascript:void(0)" onclick="contactWhatsApp()" class="whatsapp-float" title="Chat with us on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.558 4.121 1.529 5.852L.057 23.997l6.335-1.46A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.82 9.82 0 01-5.028-1.382l-.36-.214-3.742.861.936-3.618-.235-.372A9.808 9.808 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="Jay-logo.jpeg" alt="Jay's Logo" class="footer-logo">
+                <div>
+                    <div class="footer-name">Jay's Tigernut Juice</div>
+                    <div class="footer-tagline">Fresh. Natural. Delicious.</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#benefits">Benefits</a>
+                <a href="#ingredients">Ingredients</a>
+                <a href="#order">Order</a>
+                <a href="https://wa.me/2348099448891">WhatsApp</a>
+            </div>
+            <div class="footer-contact">
+                <p>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:5px;opacity:0.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.64a16 16 0 006.29 6.29l1.16-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    <a href="https://wa.me/2348099448891">+234 809 944 8891</a>
+                </p>
+                <p class="footer-copy">© Jay's Tigernut Juice. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
